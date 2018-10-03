@@ -178,7 +178,7 @@
     _publisher.view.layer.zPosition = zIndex;
 
     // Turn off user interaction for the view - allows button click-through.
-    sub.view.userInteractionEnabled = false;
+    _publisher.view.userInteractionEnabled = false;
 
     if ([cameraPosition isEqualToString:@"back"]) {
         _publisher.cameraPosition = AVCaptureDevicePositionBack;
