@@ -177,6 +177,9 @@
     // Set depth location of camera view based on CSS z-index.
     _publisher.view.layer.zPosition = zIndex;
 
+    // Turn off user interaction for the view - allows button click-through.
+    _publisher.view.userInteractionEnabled = false;
+
     if ([cameraPosition isEqualToString:@"back"]) {
         _publisher.cameraPosition = AVCaptureDevicePositionBack;
     }
@@ -400,6 +403,9 @@
 
     // Set depth location of camera view based on CSS z-index.
     sub.view.layer.zPosition = zIndex;
+
+    // Turn off user interaction for the view - allows button click-through.
+    sub.view.userInteractionEnabled = false;
 
     [self.webView.scrollView addSubview:sub.view];
 
